@@ -1,21 +1,23 @@
+# Read me
+
+This is a fork of the module [`saml-js`](https://github.com/Clever/saml2). As we needed additional features, especially the [isPassive feature](https://github.com/Clever/saml2/pull/135), we decided to fork the library and publish our own version of this library. Should the original library receive those pull requests in the future, this library may be abandonded again.
+
 # SAML2-js
 
-[![CircleCI](https://circleci.com/gh/Clever/saml2/tree/master.svg?style=svg)](https://circleci.com/gh/Clever/saml2/tree/master)
-
-`saml2-js` is a node module that abstracts away the complexities of the SAML protocol behind an easy to use interface.
+`wicked-saml2-js` is a node module that abstracts away the complexities of the SAML protocol behind an easy to use interface.
 
 ## Usage
 
 Install with [npm](https://www.npmjs.com/).
 
 ```bash
-  npm install saml2-js --save
+  npm install wicked-saml2-js --save
 ```
 
 Include the SAML library.
 
 ```javascript
-  var saml2 = require('saml2-js');
+  var saml2 = require('wicked-saml2-js');
 ```
 
 ## Documentation
@@ -226,7 +228,7 @@ An object that can contain the below options.  All options are strings, unless s
 Library users will need to implement a set of URL endpoints, here is an example of [express](http://expressjs.com/) endpoints.
 
 ```javascript
-var saml2 = require('saml2-js');
+var saml2 = require('wicked-saml2-js');
 var fs = require('fs');
 var express = require('express');
 var app = express();
