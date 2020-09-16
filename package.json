@@ -1,6 +1,6 @@
 {
   "name": "wicked-saml2-js",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "SAML 2.0 node helpers",
   "author": "Clever",
   "main": "index.js",

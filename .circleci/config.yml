@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/Clever/saml2
     docker:
-    - image: circleci/node:6.14.3-stretch
+    - image: circleci/node:12-stretch
     environment:
       CIRCLE_ARTIFACTS: /tmp/circleci-artifacts
       CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
@@ -20,3 +20,4 @@ jobs:
         command: npm install
         name: npm install
     - run: npm test
+    - run: if [ "${CIRCLE_BRANCH}" == "master" ]; then $HOME/ci-scripts/circleci/npm-publish $NPM_TOKEN .; fi;
